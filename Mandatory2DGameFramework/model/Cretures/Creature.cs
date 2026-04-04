@@ -24,29 +24,12 @@ namespace Mandatory2DGameFramework.model.Cretures
             Name = string.Empty;
             HitPoint = 100;
 
-            Attack = null;
-            Defence = null;
-
-        }
-
-        public int Hit()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void ReceiveHit(int hit)
-        {
-            throw new NotImplementedException();
         }
 
         public void Loot(WorldObject obj)
         {
             throw new NotImplementedException();
         }
-
-
-
-
 
         public override string ToString()
         {

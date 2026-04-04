@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mandatory2DGameFramework.model.Player
+namespace Mandatory2DGameFramework.model.Cretures
 {
-    internal class Player
+    internal class CreatureLoot
     {
     }
 }
