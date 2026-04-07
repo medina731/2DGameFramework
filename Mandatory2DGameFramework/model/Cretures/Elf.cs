@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Mandatory2DGameFramework.model.attack;
+using Mandatory2DGameFramework.model.defence;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,6 +15,9 @@ namespace Mandatory2DGameFramework.model.Cretures
         {
             Name = "Elf";
             HitPoint = 80;
+
+            Attack = new AttackItem { Name = "Bow", Hit = 10, Range = 3 };
+            Defence = new DefenceItem { Name = "Wings", ReduceHitPoint = 2 };
         }
     }
 }

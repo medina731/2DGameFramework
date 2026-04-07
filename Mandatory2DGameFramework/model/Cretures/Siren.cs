@@ -14,6 +14,10 @@ namespace Mandatory2DGameFramework.model.Cretures
         {
             Name = "Siren";
             HitPoint = 140;
+
+
+          Attack = new attack.AttackItem { Name = "Siren Song", Hit = 20, Range = 4 };
+          Defence = new defence.DefenceItem { Name = "Siren's Call", ReduceHitPoint = 10 };
         }
 
     }

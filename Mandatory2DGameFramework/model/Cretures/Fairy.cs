@@ -13,6 +13,9 @@ namespace Mandatory2DGameFramework.model.Cretures
         {
             Name = "Fairy";
             HitPoint = 100;
+
+            Attack = new attack.AttackItem { Name = "Magic Wand", Hit = 15, Range = 2 };
+            Defence = new defence.DefenceItem { Name = "Magic Shield", ReduceHitPoint = 5 };
         }
 
     }

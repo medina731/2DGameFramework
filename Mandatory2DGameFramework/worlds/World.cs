@@ -50,6 +50,30 @@ namespace Mandatory2DGameFramework.worlds
             _creatures = new List<Creature>();
         }
 
+        //Example of LSP test, where we can use the base class Creature to create instances of derived classes (Elf, Fairy, Siren)
+        //and interact with them through the base class interface.
+        public void TestLSP()
+        {
+            Creature c1 = new Elf();
+            Creature c2 = new Fairy();
+            Creature c3 = new Siren();
+
+            Console.WriteLine(c1.Name);
+            Console.WriteLine(c2.Name);
+            Console.WriteLine(c3.Name);
+
+            CreatureFight fight1 = new CreatureFight(c1);
+            CreatureFight fight2 = new CreatureFight(c2);
+            
+            int hit = fight1.Hit();
+                fight2.ReceiveHit(hit);
+
+            Console.WriteLine($"{c1.Name} hits {c2.Name}. {c2.Name} HP is now {c2.HitPoint}");
+
+
+        }
+
+
         /// <summary>
         /// returnere en string repræsentation af verden, med MaxX og MaxY.
         /// </summary>
