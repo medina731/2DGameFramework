@@ -1,4 +1,5 @@
-﻿using Mandatory2DGameFramework.model.attack;
+﻿using Mandatory2DGameFramework.Interfaces;
+using Mandatory2DGameFramework.model.attack;
 using Mandatory2DGameFramework.model.defence;
 using Mandatory2DGameFramework.worlds;
 using System;
@@ -7,9 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+
 namespace Mandatory2DGameFramework.model.Cretures
 {
-    public class Creature
+    public class Creature 
     {
         public string Name { get; set; }
         public int HitPoint { get; set; }

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Mandatory2DGameFramework.Interfaces;
+
 
 namespace Mandatory2DGameFramework.worlds
 {
-    public class WorldObject
+    public class WorldObject : ILootable, IRemoveable
     {
 
         /// <summary>
