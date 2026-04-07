@@ -26,10 +26,6 @@ namespace Mandatory2DGameFramework.model.Cretures
 
         }
 
-        public void Loot(WorldObject obj)
-        {
-            throw new NotImplementedException();
-        }
 
         public override string ToString()
         {
