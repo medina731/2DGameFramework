@@ -11,8 +11,8 @@ namespace Mandatory2DGameFramework.model.attack
     {
         public string Name { get; set; }
         public virtual int Hit { get; set; }
-        public int Range { get; set; }
-        public int Weight { get; set; } // tilføjet vægt property
+        public virtual int Range { get; set; }
+        public virtual int Weight { get; set; } // tilføjet vægt property
 
         public AttackItem(string name, int hit, int range, int weight )
         {
