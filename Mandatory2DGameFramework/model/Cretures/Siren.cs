@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mandatory2DGameFramework.Strategy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +11,20 @@ namespace Mandatory2DGameFramework.model.Cretures
     {
 
         // Todo consider if siren should have some special attack or defence abilities
-        public Siren()
+        public Siren(string name) : base(name, 140)
+        { 
+        MovementStrategy = new WalkStrategy();
+        }
+
+        
+        protected override void DecideAction()
         {
-            Name = "Siren";
-            HitPoint = 140;
+            Console.WriteLine($"{Name} listens for nearby creatures.");
+        }
 
-
-          Attack = new attack.AttackItem { Name = "Siren Song", Hit = 20, Range = 4 };
-          Defence = new defence.DefenceItem { Name = "Siren's Call", ReduceHitPoint = 10 };
+        protected override void ExecuteAction()
+        {
+            Console.WriteLine($"{Name} sings a hypnotic melody.");
         }
 
     }

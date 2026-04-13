@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mandatory2DGameFramework.Strategy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,14 +10,25 @@ namespace Mandatory2DGameFramework.model.Cretures
     public class Fairy : Creature
     {
         // Todo consider if fairy should have some special attack or defence abilities
-        public Fairy()
+        public Fairy(string name) : base(name, 100)
         {
-            Name = "Fairy";
-            HitPoint = 100;
-
-            Attack = new attack.AttackItem { Name = "Magic Wand", Hit = 15, Range = 2 };
-            Defence = new defence.DefenceItem { Name = "Magic Shield", ReduceHitPoint = 5 };
+            MovementStrategy = new WalkStrategy();
         }
+
+
+
+        protected override void DecideAction()
+        {
+            Console.WriteLine($"{Name} decides whether to heal or hide.");
+        }
+
+        protected override void ExecuteAction()
+        {
+            Console.WriteLine($"{Name} sprinkles magical healing dust.");
+        }
+
+
+
 
     }
 }

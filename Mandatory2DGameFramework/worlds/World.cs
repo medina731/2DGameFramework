@@ -54,9 +54,9 @@ namespace Mandatory2DGameFramework.worlds
         //and interact with them through the base class interface.
         public void TestLSP()
         {
-            Creature c1 = new Elf();
-            Creature c2 = new Fairy();
-            Creature c3 = new Siren();
+            Creature c1 = new Elf("Rio");
+            Creature c2 = new Fairy("Tinkerbell");
+            Creature c3 = new Siren("Valentina");
 
             Console.WriteLine(c1.Name);
             Console.WriteLine(c2.Name);
