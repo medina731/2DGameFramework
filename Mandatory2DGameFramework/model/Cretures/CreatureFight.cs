@@ -19,12 +19,15 @@ namespace Mandatory2DGameFramework.model.Cretures
 
         public int Hit()
         {
-            return 1;
+            return creature.Attack?.Hit ?? 0; // return the hit value of the creature's attack, or 0 if it has no attack
         }
 
         public void ReceiveHit(int hit)
         {
-            creature.ApplyDamage(hit);
+            int defence = creature.Defence?.DefenceValue ?? 0; // get the defence value of the creature's defence, or 0 if it has no defence
+
+            int damage = Math.Max(hit - defence, 0); // calculate the damage after applying defence, ensuring it doesn't go below 0
+            creature.ApplyDamage(damage); // apply the calculated damage to the creature
         }
 
     }
